@@ -15,7 +15,7 @@ export default component$(() => {
       .from("posts")
       .select("*")
       .order("created_at", { ascending: false });
-    posts.value = data as Post[];
+    posts.value = (data ?? []) as Post[];
   });
 
   return (
